@@ -1,70 +1,48 @@
 # Undiscord - Delete all messages in a Discord channel or DM
-<!-- shields -->
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/victornpb/undiscord?color=%235865f2&display_name=tag&label=Undiscord&style=flat-square)][greasyfork_url]
-[![GitHub Release Date](https://img.shields.io/github/release-date/victornpb/undiscord?style=flat-square)](https://github.com/victornpb/undiscord/releases)
-[![GitHub License](https://img.shields.io/github/license/victornpb/undiscord?style=flat-square)](https://github.com/victornpb/undiscord/blob/master/LICENSE)
-[![CodeFactor](https://www.codefactor.io/repository/github/victornpb/undiscord/badge?style=flat-square)](https://www.codefactor.io/repository/github/victornpb/undiscord?style=flat-square)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/victornpb/undiscord?style=flat-square)
-[![GitHub Stars](https://img.shields.io/github/stars/victornpb/undiscord?style=flat-square)](https://github.com/victornpb/undiscord/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/victornpb/undiscord?style=flat-square)](https://github.com/victornpb/undiscord/network/members)
-[![GitHub Discussions](https://img.shields.io/github/discussions/victornpb/undiscord?style=flat-square)](https://github.com/victornpb/undiscord/discussions)
-[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/victornpb/undiscord?style=flat-square&color=green)](https://github.com/victornpb/undiscord/pulls?q=is%3Apr+is%3Aclosed)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/victornpb/undiscord?style=flat-square&color=green)](https://github.com/victornpb/undiscord/issues?q=is%3Aissue+is%3Aclosed)
-<!-- end shields -->
+
+**Version 5.2.5** - Maintained Fork
+
+> **📍 This is a maintained fork of the original [Undiscord](https://github.com/victornpb/undiscord) project.**
+> This fork exists to continue maintenance and updates for the community as the original project has become inactive.
+
+[![License](https://img.shields.io/github/license/pleasenotagain/undiscord?style=flat-square)](https://github.com/pleasenotagain/undiscord/blob/master/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/pleasenotagain/undiscord?style=flat-square)](https://github.com/pleasenotagain/undiscord/stargazers)
 
 > ⚠️ **Any tool that automates actions on user accounts, including this one, could result in account termination.** (see [self-bots][self-bots]).  
 > Use at your own risk! ([discussion](https://github.com/victornpb/undiscord/discussions/273)).
 
-(Due to changes in chrome manifest V3, [Brave browser][brave_browser] is recommended)
+## Installation
 
-1. First you need a Browser Extension for managing UserScripts[[1]][userscrips_faq] (skip if you already have one): '
-   * Brave: [Violentmonkey][chrome_violentmonkey] or [Tampermonkey][chrome_tampermonkey]
-   * Chrome: [Violentmonkey][chrome_violentmonkey] or [Tampermonkey][chrome_tampermonkey]
-   * Firefox: [Greasemonkey][firefox_greasemonkey], [Tampermonkey][firefox_tampermonkey], or [Violentmonkey][firefox_violentmonkey]  
-   * Opera: [Tampermonkey][opera_tampermonkey] or [Violentmonkey][opera_violentmonkey]
-   * Edge: [Tampermonkey][edge_tampermonkey]  
-   * Safari: ~[Tampermonkey][safari_tampermonkey]~ 
-    
-1. Install Undiscord:  
-  [![][greasyfork_icon]][greasyfork_url] or [![][openuserjs_icon]][openuserjs_url]  
-  (NOTE: GreasyFork is recommended for now, OpenUserJS is not receiving updates)
+1. **Install a UserScript Manager** (if you don't have one):
+   - **Recommended**: [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://tampermonkey.net/)
+   - Available for Chrome, Firefox, Edge, Opera, and Safari
 
-1. Open <a href="https://discord.com/channels/@me" target="_blank">Discord</a> in your __browser__ (Not the App) and go to the channel or direct message you would like to be wiped.
+2. **Install Undiscord**:
+   - Download directly: [Undiscord v5.2.5](https://raw.githubusercontent.com/pleasenotagain/undiscord/master/deleteDiscordMessages.user.js)
+   - Or install from [GreasyFork](https://greasyfork.org/en/scripts/549672-undiscord)
 
-1. Click the <kbd>🗑️</kbd> button that was added in the top right corner.
+## Usage
 
-1. Click on the buttons near **Author ID** and **Server ID** and **Channel ID**.  
-
-1. Click the ![Delete](https://user-images.githubusercontent.com/3372598/223744853-c0d4d9e3-1914-486b-bb4f-f27e40d0e3e7.png) button to begin wipping! 
+1. Open [Discord](https://discord.com/channels/@me) in your **browser** (not the desktop app)
+2. Go to the channel or DM you want to delete messages from
+3. Click the 🗑️ trash icon in the top toolbar
+4. Configure your settings (Author ID, Server ID, Channel ID)
+5. Click **Delete** to start the process 
 
 
 ![Screenshot](https://user-images.githubusercontent.com/3372598/222977831-88eeb59a-186a-4947-8e33-0ac245c3af5c.gif)
 
-I made this tool just for you ❤️ , it would be awesome if you could just click the [⭐️ Star button](https://github.com/victornpb/undiscord) at the top!
+## Support & Feedback
 
-> A few extra generous people asked for this, so here you can [buy me a coffee](https://www.buymeacoffee.com/vitim). Thank you! You'll be in my special list ^_^
+If you find this fork helpful, please ⭐ star this repository!
 
-----
-### Need help?
-Check out the [wiki](https://github.com/victornpb/undiscord/wiki) for helpful articles, or read existing [questions](https://github.com/victornpb/undiscord/discussions), or post a new one.
+- **Issues**: Report bugs or request features in [Issues](https://github.com/pleasenotagain/undiscord/issues)
+- **Discussions**: Ask questions or share feedback in [Discussions](https://github.com/pleasenotagain/undiscord/discussions)
 
-### Have an Idea or Feature request?
-Check out the [Ideas][ideas] section, if your idea _hasn't been posted before_, please post a new one.
+## Credits
 
-### Found a bug?
-Is prefered that _issues_ follow a certain format. If you're not familiar with bug reports, please use the [discussions][discussions] tab instead.
-
-If you believe you found a bug please file an [issue](https://github.com/victornpb/undiscord/issues), but please fill the issue template.
-
-If you are looking to contribute please read the [CONTRIBUTING](./CONTRIBUTING.md) first.
-
-### Copy paste version
-Looking for the old Copy/Paste version? [here](https://github.com/victornpb/undiscord/wiki/Copy-paste-method)
-
-
-----
-
-Originally from https://gist.github.com/victornpb/135f5b346dea4decfc8f63ad7d9cc182
+Originally created by [victornpb](https://github.com/victornpb) - [Original repository](https://github.com/victornpb/undiscord)
+Support the original author: [Buy victornpb a coffee](https://www.buymeacoffee.com/vitim)
 
 ----
 ## ⛔️ DO NOT SHARE YOUR AUTH TOKEN! ⛔️ ##
@@ -97,18 +75,8 @@ Please read: [what I'm doing to ensure this is safe for users][security_policy].
   [openuserjs_icon]: https://user-images.githubusercontent.com/3372598/166113714-5a2ede39-8d66-43a8-b5da-8f1897cb3121.png
   [greasyfork_moderation]: https://greasyfork.org/en/moderator_actions
 
-  [issues]: https://github.com/victornpb/undiscord/issues
-  [issues_open]: https://github.com/victornpb/undiscord/issues
-  [issues_closed]: https://github.com/victornpb/undiscord/issues
-  [prs]: https://github.com/victornpb/undiscord/pulls
-  [pr_open]: https://github.com/victornpb/undiscord/pulls
-  [prs_closed]: https://github.com/victornpb/undiscord/pulls
-  [forks]: https://github.com/victornpb/undiscord/network/members
-
-  [wiki]: https://github.com/victornpb/undiscord/wiki
-  [discussions]: https://github.com/victornpb/undiscord/discussions
-  [ideas]: https://github.com/victornpb/undiscord/discussions/categories/2-ideas
-  [questions]: https://github.com/victornpb/undiscord/discussions/categories/1-questions-answers
+  [issues]: https://github.com/pleasenotagain/undiscord/issues
+  [discussions]: https://github.com/pleasenotagain/undiscord/discussions
   [security_policy]: https://github.com/victornpb/undiscord/wiki/Security-Policy
 
 <!-- Extensions -->

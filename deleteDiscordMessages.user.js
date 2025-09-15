@@ -2,16 +2,16 @@
 // @name            Undiscord
 // @description     Delete all messages in a Discord channel or DM (Bulk deletion)
 // @version         5.2.5
-// @author          victornpb
-// @homepageURL     https://github.com/victornpb/undiscord
-// @supportURL      https://github.com/victornpb/undiscord/discussions
+// @author          pleasenotagain
+// @homepageURL     https://github.com/pleasenotagain/undiscord
+// @supportURL      https://github.com/pleasenotagain/undiscord/discussions
 // @match           https://*.discord.com/app
 // @match           https://*.discord.com/channels/*
 // @match           https://*.discord.com/login
 // @license         MIT
-// @namespace       https://github.com/victornpb/deleteDiscordMessages
+// @namespace       https://github.com/pleasenotagain/deleteDiscordMessages
 // @icon            https://victornpb.github.io/undiscord/images/icon128.png
-// @downloadURL     https://raw.githubusercontent.com/victornpb/undiscord/master/deleteDiscordMessages.user.js
+// @downloadURL     https://raw.githubusercontent.com/pleasenotagain/undiscord/master/deleteDiscordMessages.user.js
 // @contributionURL https://www.buymeacoffee.com/vitim
 // @grant           none
 // @attribution     Original project (https://github.com/victornpb/undiscord)
@@ -348,7 +348,6 @@
                         Use the help link for more information.
                     </div>
                 </fieldset>
-                <hr>
                 <fieldset>
                     <legend>
                         Authorization Token
@@ -570,6 +569,7 @@
 	      this.calcEtr();
 	      log.verb(`Estimated time remaining: ${msToHMS(this.stats.etr)}`);
 
+	      const messagesRemaining = this.state.grandTotal - this.state.offset;
 	      // if there are messages to delete, delete them
 	      if (this.state._messagesToDelete.length > 0) {
 
@@ -587,6 +587,9 @@
 	        this.state.offset += this.state._skippedMessages.length;
 	        log.verb('There\'s nothing we can delete on this page, checking next page...');
 	        log.verb(`Skipped ${this.state._skippedMessages.length} out of ${this.state._seachResponse.messages.length} in this page.`, `(Offset was ${oldOffset}, ajusted to ${this.state.offset})`);
+	      }
+	      else if (messagesRemaining === this.state.delCount) {
+	        log.verb('There\'s messages remaining, checking next page...');
 	      }
 	      else {
 	        log.verb('Ended because API returned an empty page.');
@@ -1173,15 +1176,10 @@ body.undiscord-pick-message.after [id^="message-content-"]:hover::after {
 	window.messagePicker = messagePicker;
 
 	function getToken() {
-	  window.dispatchEvent(new Event('beforeunload'));
-	  const LS = document.body.appendChild(document.createElement('iframe')).contentWindow.localStorage;
-	  try {
-	    return JSON.parse(LS.token);
-	  } catch {
-	    log.info('Could not automatically detect Authorization Token in local storage!');
-	    log.info('Attempting to grab token using webpack');
-	    return (window.webpackChunkdiscord_app.push([[''], {}, e => { window.m = []; for (let c in e.c) window.m.push(e.c[c]); }]), window.m).find(m => m?.exports?.default?.getToken !== void 0).exports.default.getToken();
-	  }
+	  let token;
+	  window.webpackChunkdiscord_app.push([[Symbol()],{},o=>{for(let e of Object.values(o.c))try{if(!e.exports||e.exports===window)continue;e.exports?.getToken&&(token=e.exports.getToken());for(let o in e.exports)e.exports?.[o]?.getToken&&"IntlMessagesProxy"!==e.exports[o][Symbol.toStringTag]&&(token=e.exports[o].getToken());}catch{}}]);
+	  window.webpackChunkdiscord_app.pop();
+	  return token;
 	}
 
 	function getAuthorId() {
